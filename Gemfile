@@ -35,6 +35,9 @@ gem "mysql2"
 # Add to deploy
 gem 'figaro'
 gem 'puma', '~> 3.7'
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
