@@ -5,10 +5,11 @@
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
-        <li class="active"><%= link_to "Home", root_path %></li>
-        <li><a href="#">HỌC</a></li>
-        <li><a href="#">BÉ BUN</a></li>
-        <li><a href="#">CHUYỆN TÌNH YÊU</a></li>
+        <li class="<%= active_class('home') %>"><%= link_to "Home", root_path %></li>
+        <li class="<%= active_class('posts') %>"><%= link_to "Blog", posts_path %></li>
+        <li><a href="#">Review Book</a></li>
+        <li><a href="#">BUN's Story</a></li>
+        <li><a href="#">Love Story</a></li>
       </ul>
     </nav>
   </header>

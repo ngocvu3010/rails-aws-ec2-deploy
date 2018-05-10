@@ -1,0 +1,7 @@
+<div class="sidebar one_quarter">
+  <h3>RECENT POSTS</h3>
+  <% @posts.each do |post| %>
+    <p class="post-title" style="text-transform: uppercase;"><%= link_to post.title, post_path(post) %></p>
+    <span><%= post.created_at.strftime("%d %B %Y") %></span></br></br></br>
+  <% end %>
+</div>

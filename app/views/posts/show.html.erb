@@ -1,0 +1,45 @@
+<div class="wrapper row2">
+  <div id="breadcrumb" class="hoc clear">
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Blog", posts_path %></li>
+      <li><%= link_to @post.title, "javascript:avoid(0);" %></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <div class="content three_quarter first">
+      <h1><%= @post.title %></h1>
+      <%= image_tag "boconganh.jpg", class: "imgr borderedbox inspace-5" %>
+      <p style="white-space: pre-line;word-break: break-word;"><%= @post.body %></p>
+      <div class="scrollable">
+      </div>
+      <div id="comments">
+        <h2>Comments</h2>
+        <ul>
+          <li>
+            <article>
+              <header>
+                <figure class="avatar"><%= image_tag "demo/avatar.png" %></figure>
+                <address>
+                By <a href="#">A Name</a>
+                </address>
+                <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
+              </header>
+              <div class="comcont">
+                <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <%= render "form_comment" %>
+      </div>
+    </div>
+    <%= render "right_menu" %>
+    <div class="clear"></div>
+  </main>
+</div>
+
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>

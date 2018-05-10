@@ -1,0 +1,9 @@
+<div class="wrapper row3">
+  <section class="hoc container clear">
+    <div class="group latest">
+      <% @posts.each_with_index do |post, index| %>
+        <%= render "home/posts", post: post, index: index + 1 %>
+      <% end %>
+    </div>
+  </section>
+</div>

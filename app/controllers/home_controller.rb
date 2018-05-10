@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.take(9)
   end
 end
