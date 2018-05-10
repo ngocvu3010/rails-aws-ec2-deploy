@@ -1,24 +1,25 @@
 <h2>Write A Comment</h2>
-<form action="#" method="post">
+<%= form_for @comment do |f| %>
   <div class="one_third first">
     <label for="name">Name <span>*</span></label>
-    <input type="text" name="name" id="name" value="" size="22" required>
+    <%= f.text_field :name, size: 22 %>
   </div>
   <div class="one_third">
     <label for="email">Mail <span>*</span></label>
-    <input type="email" name="email" id="email" value="" size="22" required>
+    <%= f.text_field :email, size: 22 %>
   </div>
   <div class="one_third">
     <label for="url">Website</label>
-    <input type="url" name="url" id="url" value="" size="22">
+    <%= f.text_field :website, size: "22" %>
   </div>
   <div class="block clear">
     <label for="comment">Your Comment</label>
-    <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+    <%= f.text_area :body, id: "comment", cols: "25", rows: "10" %>
+    <%= f.hidden_field :post_id, value: @post.id %>
   </div>
   <div>
-    <input type="submit" name="submit" value="Submit Form">
+    <%= f.submit "Submit Form" %>
     &nbsp;
     <input type="reset" name="reset" value="Reset Form">
   </div>
-</form>
+<% end %>
