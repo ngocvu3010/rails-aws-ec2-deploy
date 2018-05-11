@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :posts
+  root :to => "home#index"
+
+  resources :posts, only: [:show, :index]
   resources :comments
 
-  root :to => "home#index"
+  namespace :admin do
+    resources :posts
+    root :to => "posts#index"
+  end
 end

@@ -10,7 +10,7 @@
     <ul class="nospace meta">
       <li>in <a href="#">Category Name</a></li>
     </ul>
-    <p><%= post.body[0,100]%>&hellip;</p>
+    <p><%= post.body[0,100].html_safe %>&hellip;</p>
     <footer><%= link_to "Read More", post_path(post) %> &raquo;</footer>
   </div>
 </article>

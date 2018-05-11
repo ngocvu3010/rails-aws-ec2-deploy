@@ -13,7 +13,7 @@
     <div class="content three_quarter first">
       <h1><%= @post.title %></h1>
       <%= image_tag "boconganh.jpg", class: "imgr borderedbox inspace-5" %>
-      <p style="white-space: pre-line;word-break: break-word;"><%= @post.body %></p>
+      <p style="white-space: pre-line;word-break: break-word;"><%= @post.body.html_safe %></p>
       <div class="scrollable">
       </div>
       <div id="comments">
