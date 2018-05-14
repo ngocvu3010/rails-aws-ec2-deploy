@@ -2,11 +2,11 @@
 <%= form_for @comment do |f| %>
   <div class="one_third first">
     <label for="name">Name <span>*</span></label>
-    <%= f.text_field :name, size: 22 %>
+    <%= f.text_field :name, size: 22, required: true %>
   </div>
   <div class="one_third">
     <label for="email">Mail <span>*</span></label>
-    <%= f.text_field :email, size: 22 %>
+    <%= f.email_field :email, size: 22, required: true %>
   </div>
   <div class="one_third">
     <label for="url">Website</label>
@@ -14,7 +14,7 @@
   </div>
   <div class="block clear">
     <label for="comment">Your Comment</label>
-    <%= f.text_area :body, id: "comment", cols: "25", rows: "10" %>
+    <%= f.text_area :body, id: "comment", cols: "25", rows: "10", required: true %>
     <%= f.hidden_field :post_id, value: @post.id %>
   </div>
   <div>

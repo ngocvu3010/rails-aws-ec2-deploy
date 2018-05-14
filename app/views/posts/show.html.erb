@@ -2,7 +2,7 @@
   <div id="breadcrumb" class="hoc clear">
     <ul>
       <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Blog", posts_path %></li>
+      <li><%= link_to Post::CATEGORIES[@post.category.to_sym], "/#{@post.category}" %></li>
       <li><%= link_to @post.title, "javascript:avoid(0);" %></li>
     </ul>
   </div>

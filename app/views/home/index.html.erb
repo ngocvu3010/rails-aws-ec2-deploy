@@ -65,14 +65,14 @@
     </div>
     <div class="one_third">
       <h6 class="heading">GỬI LỜI YÊU THƯƠNG THẦM KÍN ĐẾN MÌNH</h6>
-      <form method="post" action="#">
+      <%= form_for @message do |f| %>
         <fieldset>
           <legend>Newsletter:</legend>
-          <input class="btmspace-15" type="text" value="" placeholder="Tên">
-          <input class="btmspace-15" type="text" value="" placeholder="Lời chưa nói">
-          <button type="submit" value="submit">Submit</button>
+          <%= f.text_field :name, class: "btmspace-15", placeholder: "Tên", required: true %>
+          <%= f.text_field :body, class: "btmspace-15", placeholder: "Lời chưa nói", required: true %>
+          <%= f.button "Submit" %>
         </fieldset>
-      </form>
+      <% end %>
     </div>
   </footer>
 </div>

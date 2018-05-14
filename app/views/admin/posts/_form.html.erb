@@ -53,12 +53,14 @@
         </div>
 
         <div class="card-footer">
-        <%= f.button "Submit", class: "btn btn-primary" %>
+          <%= f.button "Submit", class: "btn btn-primary" %>
+          <%= link_to "Cancel", admin_posts_path, class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+<script src="https://cdn.ckeditor.com/ckeditor5/10.0.0/classic/ckeditor.js"></script>
 <script>
   $(function () {
     ClassicEditor

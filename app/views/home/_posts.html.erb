@@ -1,4 +1,4 @@
-<article class="one_third <%= "first" if [1, 4, 7, 10, 13, 16].include?(index) %>">
+<article class="one_third home-post <%= "first" if [1, 4, 7, 10, 13, 16].include?(index) %>">
   <figure><a href="#"><%= image_tag "boconganh.jpg" %></a>
     <figcaption>
       <time datetime="2045-04-06T08:15+00:00"><strong><%= post.created_at.strftime("%d") %></strong> <em>
@@ -8,9 +8,9 @@
   <div class="txtwrap">
     <h4 class="heading"><%= link_to post.title, post_path(post) %></h4>
     <ul class="nospace meta">
-      <li>in <a href="#">Category Name</a></li>
+      <li>in <a href="#"><%= Post::CATEGORIES[post.category.to_sym] %></a></li>
     </ul>
     <p><%= post.body[0,100].html_safe %>&hellip;</p>
-    <footer><%= link_to "Read More", post_path(post) %> &raquo;</footer>
+    <footer><%= link_to "Read More", post_path(post), class: "read-more" %> &raquo;</footer>
   </div>
 </article>

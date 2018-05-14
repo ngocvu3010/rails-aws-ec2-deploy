@@ -6,13 +6,13 @@
     <nav id="mainav" class="fl_right">
       <ul class="clear">
         <li class="<%= active_class('home') %>"><%= link_to "Home", root_path %></li>
-        <li class="<%= active_class('posts') %>"><%= link_to "Blog", posts_path(type: "blog") %></li>
-        <li>
-          <%= link_to "Review Book", posts_path(type: "review_book") %></li>
-        <li>
-          <%= link_to "BUN's Story", posts_path(type: "bun_story") %></li>
-        <li>
-          <%= link_to "Love Story", posts_path(type: "love_story") %></li>
+        <li class="<%= active_class('posts', 'blog') %>"><%= link_to "Blog", blog_path %></li>
+        <li class="<%= active_class('posts', 'review_book') %>">
+          <%= link_to "Review Book", review_book_path %></li>
+        <li class="<%= active_class('posts', 'bun_story') %>">
+          <%= link_to "BUN's Story", bun_story_path %></li>
+        <li class="<%= active_class('posts', 'love_story') %>">
+          <%= link_to "Love Story", love_story_path %></li>
       </ul>
     </nav>
   </header>
