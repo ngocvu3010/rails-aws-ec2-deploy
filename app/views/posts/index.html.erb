@@ -5,5 +5,8 @@
         <%= render "home/posts", post: post, index: index + 1 %>
       <% end %>
     </div>
+    <div class="paginate">
+      <%= paginate @posts  %>
+    </div>
   </section>
 </div>

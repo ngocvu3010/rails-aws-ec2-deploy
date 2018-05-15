@@ -1,21 +1,7 @@
 
-.home-top {
-  background-image: image-url("backgroud.jpg")
-}
-
-.home-second {
-  background-image: image-url("camera.jpg")
-}
-
-.image-profile {
-  width: 60px;
-  height: 60px
-}
-
-
 .pagination a, .pagination span.current, .pagination span.gap {
     float: left;
-    padding: 8px 14px;
+    padding: 0 14px;
     line-height: 38px;
     text-decoration: none;
     background-color: white;
@@ -50,8 +36,4 @@
         float: none;
         border: none;
     }
-}
-
-.paginate {
-  margin-top: 30px;
 }

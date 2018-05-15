@@ -1,6 +1,6 @@
 <tr>
   <td><%= image_tag "ngoc.jpg", style: "width: 50px; height: 50px" %></td>
-  <td><%= post.title %></td>
+  <td><%= link_to post.title, edit_admin_post_path(post) %> </td>
   <td><%= post.body.truncate(150).html_safe %></td>
   <td><%= post.category %></td>
   <td><%= post.updated_at %></td>
@@ -9,7 +9,8 @@
   <% end %>
     <%= link_to admin_post_path(post.id), method: :delete,
       data: {confirm: "Are you Sure"}, class: "btn-icon btn-delete" do %>
-        Delete
+        <i class="fa fa-trash" aria-hidden="true"></i>
+
     <% end %>
   </td>
 </tr>

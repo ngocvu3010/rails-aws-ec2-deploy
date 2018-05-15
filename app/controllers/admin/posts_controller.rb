@@ -3,7 +3,7 @@ class Admin::PostsController < ApplicationController
   before_action :load_post, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.page(params[:page]).per(10)
   end
 
   def new

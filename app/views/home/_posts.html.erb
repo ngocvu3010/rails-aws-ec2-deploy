@@ -1,4 +1,4 @@
-<article class="one_third home-post <%= "first" if [1, 4, 7, 10, 13, 16].include?(index) %>">
+<article class="one_third home-post <%= "first" if first_element(index) %>">
   <figure><a href="#"><%= image_tag "boconganh.jpg" %></a>
     <figcaption>
       <time datetime="2045-04-06T08:15+00:00"><strong><%= post.created_at.strftime("%d") %></strong> <em>
